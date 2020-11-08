@@ -14,3 +14,11 @@ POST
 PUT
 
 DELETE
+
+## TODO
+
+Database/model:
+- Add related catogory to ingredient
+- Add price to ingredient
+- Add removable/addable to ingredient
+- Add "meal ingredients" such as "replace soda with beer" or "cider"
