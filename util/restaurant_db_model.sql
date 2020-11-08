@@ -94,10 +94,6 @@ ALTER TABLE `orderContents` ADD CONSTRAINT `fk_orderContents_order`
   FOREIGN KEY (`orderid`) REFERENCES `order` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
-// Creating menu
-
-// Categories
-
 INSERT INTO `category` (name)
 VALUES 
 ("Burgers"),
@@ -107,7 +103,6 @@ VALUES
 ("Beverages")
 ;
 
-// Ingredients
 
 INSERT INTO `ingredients` (name)
 VALUES
@@ -127,7 +122,6 @@ VALUES
 ("Strawberry Sauce")
 ;
 
-// Food Items
 
 INSERT INTO `fooditem` (name, price, category, description, imgPath)
 SELECT
@@ -149,7 +143,6 @@ SELECT
 "Devilz Brgr", 9.60, id, "Burger with Cheese and Jalapeño", NULL
 FROM `category` WHERE name = "Burgers";
 
-// Meals
 
 INSERT INTO `fooditem` (name, price, category, description, imgPath)
 SELECT
@@ -171,14 +164,11 @@ SELECT
 "Devilz Brgr meal", 14.50, id, "Burger with cheese and jalapeño meal", NULL
 FROM `category` WHERE name = "Meals";
 
-// Sides
 
 INSERT INTO `fooditem` (name, price, category, description, imgPath)
 SELECT
 "Fries", 3.00, id, "French fries", NULL
 FROM `category` WHERE name = "Sides";
-
-// Desserts
 
 INSERT INTO `fooditem` (name, price, category, description, imgPath)
 SELECT
@@ -190,7 +180,6 @@ SELECT
 "Fudge Brownie", 4.50, id, "Fudge Brownie square", NULL
 FROM `category` WHERE name = "Desserts";
 
-// Beverages
 
 INSERT INTO `fooditem` (name, price, category, description, imgPath)
 SELECT
